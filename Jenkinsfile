@@ -1,4 +1,7 @@
 def list
+def string-no-of-stage = '${param.no-of-stages}'
+def no-of-stage = string-no-of-stage.toInteger
+
 pipeline {
     agent none
     options {buildDiscarder(logRotator(daysToKeepStr: '7', numToKeepStr: '1'))}
@@ -7,7 +10,7 @@ pipeline {
             steps {
 	
                 script {
-					for(int i=0; i < no-of-stages; i++) {
+					for(int i=0; i < no-of-stage; i++) {
                      list.add("Test $i")
                     }
                 }
