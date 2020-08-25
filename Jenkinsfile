@@ -13,7 +13,7 @@ pipeline {
 				    list = []
 				    noofstage = '${params.no-of-stages}'
 	                //noofstage = stnoofstage.toInteger()
-					for(int i=0; i < int(noofstage); i++) {
+					for(int i=0; i < noofstage as int; i++) {
                      list.add("Test $i")
                     }
                 }
