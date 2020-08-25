@@ -7,7 +7,7 @@ pipeline {
             steps {
 	
                 script {
-					for(int i=0; i < params.no-of-stages; i++) {
+					for(int i=0; i < no-of-stages; i++) {
                      list.add("Test $i")
                     }
                 }
