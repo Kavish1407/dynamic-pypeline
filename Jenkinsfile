@@ -11,7 +11,7 @@ pipeline {
 	             
                 script {
 				    list = []
-				    stnoofstage = '${param.no-of-stages}'
+				    stnoofstage = '${params.no-of-stages}'
 	                noofstage = stnoofstage.toInteger()
 					for(int i=0; i < no-of-stage; i++) {
                      list.add("Test $i")
