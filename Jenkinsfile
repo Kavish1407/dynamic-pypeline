@@ -1,6 +1,6 @@
 def list
-def string-no-of-stage = '${param.no-of-stages}'
-def no-of-stage = string-no-of-stage.toInteger
+def st-no-of-stage = '${param.no-of-stages}'
+def no-of-stage = st-no-of-stage.toInteger
 
 pipeline {
     agent none
