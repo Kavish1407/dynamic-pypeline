@@ -5,9 +5,13 @@ pipeline {
     stages {
         stage('Create List') {
             steps {
+	
                 script {
                     // you may create your list here, lets say reading from a file after checkout
-                    list = ["Test-1", "Test-2", "Test-3", "Test-4", "Test-5","Test-6"]
+					for(int i=0; i < ${params.no-of-stages}; i++) {
+                     list.add("Test-".concat($i))  
+					 echo list
+                    }
                 }
             }
         }
