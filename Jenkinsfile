@@ -7,8 +7,7 @@ pipeline {
             steps {
 	
                 script {
-                    // you may create your list here, lets say reading from a file after checkout
-					for(int i=0; i < ${params.no-of-stages}; i++) {
+					for(int i=0; i < params.no-of-stages; i++) {
                      list.add("Test $i")
                     }
                 }
