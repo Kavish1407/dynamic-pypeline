@@ -9,8 +9,7 @@ pipeline {
                 script {
                     // you may create your list here, lets say reading from a file after checkout
 					for(int i=0; i < ${params.no-of-stages}; i++) {
-                     list.add("Test-".concat($i))  
-					 echo list
+                     list.add("Test $i")
                     }
                 }
             }
