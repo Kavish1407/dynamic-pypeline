@@ -1,6 +1,6 @@
 def list
-def st-no-of-stage = '${param.no-of-stages}'
-def no-of-stage = st-no-of-stage.toInteger
+def stnoofstage
+def noofstage
 
 pipeline {
     agent none
@@ -8,8 +8,11 @@ pipeline {
     stages {
         stage('Create List') {
             steps {
-	
+	             
                 script {
+				    list = []
+				    stnoofstage = '${param.no-of-stages}'
+	                noofstage = stnoofstage.toInteger()
 					for(int i=0; i < no-of-stage; i++) {
                      list.add("Test $i")
                     }
