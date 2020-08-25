@@ -1,5 +1,5 @@
 def list
-def stnoofstage
+//ef stnoofstage
 def noofstage
 
 pipeline {
@@ -11,9 +11,9 @@ pipeline {
 	             
                 script {
 				    list = []
-				    stnoofstage = '${params.no-of-stages}'
-	                noofstage = stnoofstage.toInteger()
-					for(int i=0; i < no-of-stage; i++) {
+				    noofstage = '${params.no-of-stages}'
+	                //noofstage = stnoofstage.toInteger()
+					for(int i=0; i < noofstage; i++) {
                      list.add("Test $i")
                     }
                 }
